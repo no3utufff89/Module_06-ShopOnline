@@ -1,0 +1,460 @@
+/*Фоны категорий*/
+
+.category-list__link_books {
+    background-image: url(../../assets/categoties/books.png);
+}
+
+.category-list__link_sale {
+    background-image: url(../../assets/categoties/sale.png);
+}
+
+.category-list__link_shoes {
+    background-image: url(../../assets/categoties/shoes.png);
+}
+
+.category-list__link_shoes-sale {
+    background-image: url(../../assets/categoties/shoes-sale.png);
+}
+
+.category-list__link_gifts {
+    background-image: url(../../assets/categoties/gifts.png);
+}
+
+.category-list__link_electronics {
+    background-image: url(../../assets/categoties/electronics.png);
+}
+
+.category-list__link_dress {
+    background-image: url(../../assets/categoties/dress.png);
+}
+
+.category-list__link_chemicals {
+    background-image: url(../../assets/categoties/chemicals.png);
+}
+
+.category-list__link_decorations {
+    background-image: url(../../assets/categoties/decorations.png);
+}
+
+.category-list__link_new-year {
+    background-image: url(../../assets/categoties/new-year-banner.png);
+}
+
+
+/*===========*/
+.categoty-list__item:hover{
+    scale: 1.03;
+}
+.category-list__link {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding-left: 9px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--main-white);
+    position: relative;
+}
+
+
+/*Тип карточек*/
+
+
+/*==========*/
+
+
+/*Оформление текста на карточках*/
+
+.category__text_decor_blue {
+    background-color: var(--main-light-blue);
+    padding-top: 7px;
+    padding-bottom: 11px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.category__text_decor_blue>span {
+    text-transform: uppercase;
+}
+
+.category__text_decor_red {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    text-align: center;
+    background-color: var(--main-white);
+    color: var(--main-dark-pink);
+    border-radius: 6px;
+}
+
+.category-list__link_new-year {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 123px;
+}
+
+.category-list__link_sale {
+    justify-content: flex-start;
+    padding-top: 28px;
+}
+
+
+/*Знак распродажи SALE*/
+
+.discont-marker-top {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: var(--main-yellow);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discont-marker-bottom {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--main-yellow);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-list__link_chemicals {
+    font-size: 11.5px;
+}
+
+.category__text_bold {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.shoes,
+.gifts,
+.electronics {
+    grid-column: span 2;
+}
+
+.dress {
+    grid-row: span 2;
+}
+
+.new-year {
+    grid-column: span 2;
+}
+
+.shoes-sale {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.category-list {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-auto-rows: minmax(118px, 130px);
+    gap: 20px;
+}
+
+.categoty-list__item {
+    display: block;
+    transition: 0.3s;
+    will-change: scale;
+}
+
+@media (min-width: 760px) {
+.category-list {
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(2,140px) 253px 106px;
+    grid-template-rows: 130px repeat(3,126px) 337px;
+}
+.new-year {
+    grid-row: 5/6;
+    grid-column: 1/5;
+}
+.electronics {
+    grid-row: 4/5;
+    grid-column: 1/3;
+}
+.gifts {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+.shoes{
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.shoes-sale{
+    grid-row: 1/4;
+    grid-column: 3/5;
+    height: 380px;
+}
+.dress {
+    grid-row: 3/5;
+    grid-column: 3/4;
+    height: 171px;
+    align-self: flex-end;
+}
+.decorations,.chemicals {
+    height: 83px;
+    align-self: flex-end;
+    width: 82px;
+}
+.chemicals{
+    grid-row: 3/5;
+    grid-column: 4/5;
+    align-self: center;
+}
+.decorations{
+    grid-row: 4/5;
+    grid-column: 4/5;
+}
+.category-list__link_new-year{
+    height: 100%;
+}
+.category-list__link_dress{
+    background-image: url(../../assets/categoties/dress-m.png);
+}
+.books,.sale {
+    width: 130px;
+}
+.sale {
+    justify-self: end;
+}
+.category__text_decor_blue {
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+.category__text_decor_blue > span {
+    text-transform: uppercase;
+}
+.category-list__link_books {
+    font-size: 20px;
+    line-height:22px;
+}
+.category__text_bold {
+    font-size: 26px;
+line-height: 110%;
+
+}
+.category-list__link {
+    font-size: 16px;
+line-height: 29px;
+}
+.category-list__link_sale {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+}
+.category-list__link_gifts{
+    padding-right: 143px;
+}
+.category-list__link_chemicals{
+    font-size: 12px;
+line-height: 14px;
+padding-left: 3px;
+padding-right: 7px;
+}
+.discont-marker-top_small {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+line-height: 16px;
+}
+.category__text_decor_red {
+    font-size: 20px;
+line-height: 24px;
+padding-top: 22px;
+padding-bottom: 22px;
+max-width: 347px;
+
+}
+}
+@media (min-width:1000px) {
+    .category-list {
+        grid-template-columns: 217px 217px 206px 210px;
+        grid-template-rows: 202px 220px 196px 196px 418px;
+        column-gap: 30px;
+        row-gap: 24px;
+    }
+    .shoes-sale {
+        height: 446px;
+    }
+    .books,.sale {
+        width: 202px;
+    }
+    .dress {
+        grid-row: 3/5;
+        height: 100%;
+    }
+    .category-list__link_dress{
+        background-image: url(../../assets/categoties/dress-l.png);
+    }
+    .chemicals {
+        grid-row: 3/4;
+        width: 196px;
+        height: 100%;
+        justify-self: end;
+    }
+    .decorations {
+        width: 196px;
+        height: 100%;
+        justify-self: end;
+    }
+    .discont-marker-top {
+        width: 88px;
+        height: 88px;
+        font-size: 30px;
+line-height: 130%;
+/* identical to box height, or 39px */
+    }
+    .discont-marker-bottom{
+        width: 88px;
+        height: 88px;
+        font-size: 30px;
+line-height: 130%;
+/* identical to box height, or 39px */
+    }
+    .category-list__link_shoes-sale{
+        padding: 20px;
+    }
+    .category__text_decor_blue {
+        font-size: 30px;
+line-height: 120%;
+        text-align: left;
+        padding-top: 24px;
+        padding-bottom: 32px;
+        padding-left: 25px;
+        padding-right: 27px;
+    }
+    .category__text_decor_blue > span {
+        text-transform: uppercase;
+    }
+    .category-list__link_new-year {
+        padding-left: 30px;
+        padding-bottom: 39px;
+    }
+    .category-list__link {
+        font-size: 24px;
+        line-height: 130%;
+        /* or 31px */
+    }
+}
+.category-list__link_books {
+    font-size: 24px;
+line-height: 130%;
+/* or 31px */
+padding-right: 3px;
+padding-left: 9px;
+}
+@media (min-width:1770px) {
+    .category-list {
+        grid-template-rows: repeat(4,228px);
+        grid-template-columns: repeat(6,245px);
+        column-gap: 60px;
+        row-gap: 60px;
+    }
+    .shoes,.electronics {
+        height: 228px;
+        
+    }
+    .gifts {
+        height: 228px;
+       
+    }
+    .shoes-sale {
+        grid-row: 1/3;
+        grid-column: 3/5;
+        height: 100%;
+        width: 516px;
+        justify-self: end;
+    }
+    .gifts {
+        grid-row: 1/2;
+        grid-column: 5/7;
+    }
+    .electronics {
+        grid-row: 2/3;
+        grid-column: 5/7;
+    }
+    .new-year {
+        grid-row: 3/5;
+        grid-column: 1/5;
+    }
+    .dress {
+        grid-row: 3/5;
+        grid-column: 5/6;
+    }
+    .chemicals {
+        grid-row: 3/4;
+        grid-column: 6/7;
+        width: 100%;
+    }
+    .decorations {
+        grid-row: 4/5;
+        grid-column: 6/7;
+        width: 100%;
+    }
+    .books,.sale {
+        width: 245px;
+    }
+    .category-list__link_gifts {
+        font-size: 40px;
+line-height: 130%;
+/* or 52px */
+padding-left: 30px;
+padding-bottom: 30px;
+
+    }
+    .category-list__link_sale {
+        padding-top: 77px;
+    }
+    .category__text_decor_red {
+        font-size: 40px;
+line-height: 120%;
+/* identical to box height, or 48px */
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 40px;
+padding-right: 40px;
+max-width: 643px;
+    }
+    .category-list__link_chemicals{
+        padding-left: 20px;
+        padding-bottom: 37px;
+    }
+    .category-list__link_electronics {
+        padding-left: 30px;
+        padding-bottom: 40px;
+        font-size: 40px;
+line-height: 130%;
+    }
+}

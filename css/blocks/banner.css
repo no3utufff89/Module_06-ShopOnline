@@ -1,0 +1,167 @@
+    .banner {
+        color: var(--main-white);
+    }
+    
+    .banner__container {
+        background-image: url(../../assets/top-banner-s.png);
+        background-repeat: no-repeat;
+        height: 340px;
+        background-size: cover;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        padding-top: 50px;
+        padding-bottom: 30px;
+        justify-items: center;
+    }
+    
+    .banner-action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-end;
+    }
+    
+    .timer {
+        display: flex;
+        column-gap: 8px;
+        flex-direction: column;
+       
+    }
+    
+    .banner__text {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+    }
+    .timer-block {
+        display: flex;
+        gap: 15px;
+    }
+    .banner-action__text {
+        margin-bottom: 6px;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: center;
+    }
+    
+    .timer__number {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    
+    .timer__days {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .timer__hours {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .timer__minutes {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 16px */
+    }
+    .timer__count {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 130%;
+    }
+
+    /*================MEDIA====================*/
+    
+    @media (min-width:760px) {
+        .banner__container {
+            padding-top: 64px;
+            background-image: url(../../assets/top-banner-m.png);
+            height: 280px;
+            background-position: center;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .banner__text {
+            justify-self: start;
+            font-size: 30px;
+            line-height: 39px;
+        }
+        .banner-action__text {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+        .timer__number {
+            font-size: 30px;
+            line-height: 39px;
+        }
+        .timer__days,
+        .timer__hours,
+        .timer__minutes {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        .timer {
+            column-gap: 10px;
+        }
+    }
+    
+    @media (min-width:1000px) {
+        .banner__container {
+            border-radius: 16px;
+            background-image: url(../../assets/top-banner-l.png);
+            padding-bottom: 36px;
+        }
+        .banner__text {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        .banner-action__text {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        .timer__number {
+            font-size: 40px;
+            line-height: 52px;
+        }
+        .timer {
+            column-gap: 20px;
+        }
+        .timer__days,
+        .timer__hours,
+        .timer__minutes {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+    
+    @media (min-width:1770px) {
+        .banner__container {
+            background-image: url(../../assets/top-banner-xl.jpg);
+            padding-top: 145px;
+            padding-left: 110px;
+            padding-bottom: 40px;
+            height: 480px;
+        }
+        .banner-action__text {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        .timer__number {
+            font-size: 60px;
+            line-height: 78px;
+        }
+        .timer__days {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        .timer {
+            column-gap: 30px;
+        }
+    }
