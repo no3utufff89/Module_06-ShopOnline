@@ -2,3 +2,6 @@
 @import './blocks/header.css';
 @import './blocks/banner.css';
 @import './blocks/promo.css';
+@import './blocks/blogs.css';
+@import './blocks/pagination.css';
+@import './blocks/article.css';
