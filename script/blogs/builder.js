@@ -1,3 +1,5 @@
+import { renderPosts } from "./renderPosts.js";
+
 export const createBlog = ({id, title}) => {
     const li = document.createElement('li');
     li.className = 'blogs-list__item blog-card';
@@ -47,11 +49,37 @@ export const createPaginationLi = (page, liActive) => {
     li.className = `pagination__item ${liActive}`;
     const a = document.createElement('a');
     a.textContent = page;
+    a.style.cssText = `
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    `;
+    
     if (page === 1) {
         a.href= `./blog.html`;
+       
     } else {
         a.href= `./blog.html?page=${page}`;
     }
     li.append(a);
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+        let page = +(new  URLSearchParams(a.search).get('page'));
+        window.history.pushState(
+            {},
+            '',
+            `?page=${page}`
+        )
+        renderPosts(page)
+        if (page === 0) {
+            window.history.pushState(
+                {},
+                '',
+                `${window.location.pathname}`
+            )
+        }
+    })
     return li;
 };

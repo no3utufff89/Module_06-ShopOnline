@@ -1,10 +1,8 @@
 import {renderPosts} from "./renderPosts.js";
 import {controls} from "./controls.js";
-let page = +(new  URLSearchParams(window.location.search).get('page'));
+import {getPageNumber} from "./getPageNumber.js";
+let page = getPageNumber();
 
-if (page === 0) {
-    page = 1;
-}
 renderPosts(page);
-controls(page);
+controls();
 

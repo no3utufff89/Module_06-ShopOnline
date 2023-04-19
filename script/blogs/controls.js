@@ -1,24 +1,36 @@
 import {getPageElements} from "./getPageElements.js";
 import {renderPosts} from "./renderPosts.js";
-const {paginationBlock, blogsList} = getPageElements();
-export const controls = (page) => {
+import {getPageNumber} from "./getPageNumber.js";
+const {paginationBlock} = getPageElements();
+let page;
+export const controls = () => {
+
     paginationBlock.addEventListener('click', (e) => {
         let target = e.target;
+        page = getPageNumber();
         if ( target.closest('.pagination__arrow_left')) {
-            if (page === 1) {
 
-            } else {
-            page--;
+            if (page > 2) {
+                page--;
                 window.history.pushState(
                     {},
                     '',
                     `?page=${page}`
                 )
-            console.log(page)
-            renderPosts(page)
+                renderPosts(page)
+            } else {
+                page = 1;
+                window.history.pushState(
+                    {},
+                    '',
+                    `${window.location.pathname}`
+                )
+                renderPosts(page)
+
             }
         }
         if ( target.closest('.pagination__arrow_right')) {
+            page = getPageNumber();
             page++
             window.history.pushState(
                 {},
@@ -26,7 +38,6 @@ export const controls = (page) => {
                 `?page=${page}`
             )
             renderPosts(page)
-            console.log(page)
         }
     });
 }

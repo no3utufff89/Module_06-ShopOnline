@@ -16,13 +16,16 @@ export const pagination = ({pages}, page) => {
     if (page === 1) {
         pageLength = page;
         counter =  pageLength + 2;
-        paginationArrow[0].classList.add('dfgdfgdfg');
+        paginationArrow[0].classList.add('not-active');
+    }
+    else {
+        paginationArrow[0].classList.remove('not-active');
     }
 
     if (page === pages) {
         pageLength = page - 2;
         counter =  page;
-        paginationArrow[1].classList.add('sdfsdffsdfs');
+        paginationArrow[1].classList.add('not-active');
     }
 
     for (pageLength;  pageLength <= counter; pageLength++) {

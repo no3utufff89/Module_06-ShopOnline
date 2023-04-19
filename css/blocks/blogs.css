@@ -26,6 +26,8 @@
     font-size: 32px;
     line-height: 42px;
     display: block;
+    height: 80px;
+    overflow: hidden;
     
 }
 
